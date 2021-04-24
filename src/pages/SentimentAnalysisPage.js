@@ -4,11 +4,18 @@ function SentimentAnalysis(props) {
     const isPreview = props.isPreview;
 
     return (
-        <div>
+        <>
             {isPreview ? (
-                <div>
+                <div className="home__sentiment-analysis-container">
                     <h4>Sentiment Analysis</h4>
-                    <h2>{props.sentimentList.join(', ').trim()}</h2>
+                    {/* <h2>{props.sentimentList.join(', ').trim()}</h2> */}
+                    <ul>
+                        {props.sentimentList.map((e) => (
+                            <li>
+                                <h2>{e}</h2>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             ) : (
                 <div>
@@ -74,7 +81,7 @@ function SentimentAnalysis(props) {
                     </footer>
                 </div>
             )}
-        </div>
+        </>
     );
 }
 

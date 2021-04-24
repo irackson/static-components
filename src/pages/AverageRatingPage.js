@@ -4,9 +4,9 @@ function AverageRating(props) {
     const isPreview = props.isPreview;
 
     return (
-        <div>
+        <>
             {isPreview ? (
-                <div>
+                <div className="home__average-rating-container">
                     <h4>Average Rating</h4>
                     <h2>{props.ratingCount}</h2>
                 </div>
@@ -39,7 +39,7 @@ function AverageRating(props) {
                     </footer>
                 </div>
             )}
-        </div>
+        </>
     );
 }
 

@@ -1,4 +1,5 @@
 import './App.css';
+import './Home.css';
 import { useState } from 'react';
 
 import Header from './components/Header';
@@ -25,7 +26,7 @@ function App() {
                     exact
                     path="/"
                     render={() => (
-                        <div>
+                        <div className="home">
                             <Dashboard></Dashboard>
                             <Reviews
                                 isPreview={true}

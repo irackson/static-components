@@ -4,11 +4,15 @@ function Reviews(props) {
     const isPreview = props.isPreview;
 
     return (
-        <div>
+        <>
             {isPreview ? (
-                <div>
+                <div className="home__reviews-container">
                     <h4>Reviews</h4>
-                    <h2>{props.reviewCount}</h2>
+                    <h2>
+                        {new Intl.NumberFormat('en-US').format(
+                            props.reviewCount
+                        )}
+                    </h2>
                 </div>
             ) : (
                 <div>
@@ -39,7 +43,7 @@ function Reviews(props) {
                     </footer>
                 </div>
             )}
-        </div>
+        </>
     );
 }
 

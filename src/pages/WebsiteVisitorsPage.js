@@ -4,11 +4,12 @@ function WebsiteVisitors(props) {
     const isPreview = props.isPreview;
 
     return (
-        <div>
+        <>
             {isPreview ? (
-                <div>
+                <div className="home__website-visitors-container">
                     <h4>Website Visitors</h4>
                     <h2>{props.visitorCount}</h2>
+                    <div className="home__visitor-hero"></div>
                 </div>
             ) : (
                 <div>
@@ -39,7 +40,7 @@ function WebsiteVisitors(props) {
                     </footer>
                 </div>
             )}
-        </div>
+        </>
     );
 }
 
